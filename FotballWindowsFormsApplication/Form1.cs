@@ -35,9 +35,10 @@ namespace FotballWindowsFormsApplication
             dataTable.Columns.Add("For Goal");
             dataTable.Columns.Add("Against Goal");
             dataTable.Columns.Add("For-Against goal Difference");
-            string filePath = @"../../AppData/football.csv";
+            string filePath = @textBox1.Text;
+                // @"../../AppData/football.csv";
                 //@textBox1.Text;
-            //@"D:/Programing Test/FootballExercise2017/FootballExercise2017/FootballExercise/football.csv";
+                //@"D:/Programing Test/FootballExercise2017/FootballExercise2017/FootballExercise/football.csv";
             StreamReader streamReader = new StreamReader(filePath);
             string[] totalData = new string[File.ReadAllLines(filePath).Length];
             totalData = streamReader.ReadLine().Split(',');
